@@ -1,9 +1,12 @@
 FROM alpine:latest
 MAINTAINER paul@psexton.net
 
+# Install Python 3
+RUN apk add --update python3
+
 # Copy in script and set permissions
 RUN mkdir /etc/periodic/1min
-ADD announcer.sh /etc/periodic/1min/announcer
+ADD announcer.py /etc/periodic/1min/announcer
 RUN chmod a+x /etc/periodic/1min/announcer
 
 # Create a cron entry for 1min
