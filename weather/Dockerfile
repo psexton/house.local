@@ -4,6 +4,9 @@ MAINTAINER paul@psexton.net
 # Install Python 3
 RUN apk add --update python3
 
+# Install Python modules
+RUN pip3 install requests adafruit-io
+
 # Create a cron entry for 1min
 RUN mkdir /etc/periodic/1min
 RUN crontab -l | { echo "*       *       *       *       *       run-parts /etc/periodic/1min"; cat; } | crontab -
