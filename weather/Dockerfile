@@ -1,8 +1,5 @@
-FROM alpine:latest
+FROM python:3.6-alpine
 MAINTAINER paul@psexton.net
-
-# Install Python 3
-RUN apk add --update python3
 
 # Install Python modules
 RUN pip3 install requests adafruit-io
