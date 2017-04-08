@@ -12,8 +12,12 @@ Retrieves the temperature and apparent temperature (windchill in the winter, hum
 
 You'll need: Docker, DarkSky API key, Adafruit IO API key.
 
+More info at [Docker Hub](https://hub.docker.com/r/psexton/house-local-weather/).
+
 ## bedroom2
 
 Reads in the temperature and humidity from a [AM2302](https://www.adafruit.com/products/393) sensor, and uploads it to [Adafruit IO](https://io.adafruit.com/). Because it needs to access the GPIO pins, it runs directly on the Pi, rather than in a Docker container.
 
 You'll need: Raspberry Pi, AM2302 sensor, Python2, Adafruit IO API key.
+
+Additional setup needed. See [adafruit/Adafruit_Python_DHT](https://github.com/adafruit/Adafruit_Python_DHT).
