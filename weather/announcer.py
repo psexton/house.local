@@ -8,8 +8,8 @@ import Adafruit_IO
 print("Ran at", datetime.datetime.now())
 
 # Read in the json config
-# Found at /etc/net.psexton.house-local-weather.json
-with open('/etc/net.psexton.house-local-weather.json') as config_file:
+# Found at /etc/net.psexton.house-local.json
+with open('/etc/net.psexton.house-local.json') as config_file:
     config_data = json.load(config_file)
 
 # Read in the weather forecast
